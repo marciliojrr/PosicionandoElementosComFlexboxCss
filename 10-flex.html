@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+    <style>
+        h3 {
+            color: #fff;
+            background-color: #000;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        h4 {
+            color: #000;
+            background-color: #fff;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 1px solid #000;
+            max-width: 400px;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .flex-1 {
+            flex: 1; /* grow = 1; shrink = 1; basis = 0 */
+        }
+
+        .flex-2 {
+            flex: 2; /* grow = 2; shrink = 1; basis = 0 */
+        }
+
+        .largura {
+            width: 200px; /* Ignorado */
+            /*min-width: 250px;*/ /* Não Ignorado */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Flex</h3>
+        <h4>Esta propriedade é um atalho ou abreviação de escrita para das propriedades: grow, shrink e basis, nesta ordem.</h4>
+        <hr>
+    </div>
+
+    <h3>flex: 1</h3> <h4>(grow = 1; shrink = 1; basis = 0)</h3></h4>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBB</div>
+        <div class="item flex-1">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    
+    <br>
+
+    <h3>flex: mix</h3> <h4>(grow = 2; shrink = 1; basis = 0)</h3></h4>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BBB</div>
+        <div class="item flex-2">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+
+    <br>
+
+    <h3>width ignorado -> basis = 0</h3> <h4>"largura" possui apenas um width, que é ignorado. Ma se houver um min-width, este é utilizado.</h4>
+    <div class="flex-container">
+        <div class="item flex-1 largura">A</div>
+        <div class="item flex-1 largura">BBB</div>
+        <div class="item flex-1 largura">CC</div>
+        <div class="item flex-1 largura">D</div>
+        <div class="item flex-1 largura">EF</div>
+    </div>
+</body>
+</html>

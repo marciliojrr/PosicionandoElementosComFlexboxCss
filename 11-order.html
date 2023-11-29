@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Order</title>
+    <style>
+        h3 {
+            color: #fff;
+            background-color: #000;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        h4 {
+            color: #000;
+            background-color: #fff;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .flex-container {
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            flex: 1;
+            background: lightslategray;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+            order: 0;
+        }
+
+        .order-1 {
+            order: 1;
+        }
+
+        .order-2 {
+            order: 2;
+        }
+
+        .order-3 {
+            order: 3;
+        }
+
+        .order-4 {
+            order: 4;
+        }
+
+        .direction {
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Order</h3>
+        <h4>É necessário que seja aplicado a todos os elementos, para que funcione. Pois colocar em apenas um, não haverá um ponto de referência.</h4>
+        <hr>
+    </div>
+
+    <h1> - ROW</h1>
+    <h3>Order: 0 (padrão)</h3>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <h3>Order: diferentes</h3>
+    <div class="flex-container">
+        <div class="item order-3">1</div>
+        <div class="item order-2">4</div>
+        <div class="item order-3">4n</div>
+        <div class="item order-1">4m</div>
+    </div>
+
+    <h1> - Column</h1>
+    <h3>Order: 0 (padrão)</h3>
+    <div class="flex-container direction">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <h3>Order: diferentes</h3>
+    <div class="flex-container direction">
+        <div class="item order-3">7</div>
+        <div class="item order-1">9</div>
+        <div class="item order-3">1</div>
+        <div class="item order-2">4</div>
+        <div class="item order-3">4n</div>
+        <div class="item order-1">4m</div>
+    </div>
+
+
+</body>
+</html>

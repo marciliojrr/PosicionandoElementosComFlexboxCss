@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align-self</title>
+    <style>
+        h3 {
+            color: #fff;
+            background-color: #000;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .align-container {
+            align-items: flex-end;
+        }
+
+        h4, h5 {
+            color: #000;
+            background-color: #fff;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 1px solid #000;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+
+        .direction-column {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Align-self</h3>
+        <h4>É a propriedade que estabelece o alinhamento de modo individual sobre um determinado item.</h4>
+
+        <h4>Valores possíveis:</h4>
+        <h5>- <b>auto:</b> valor padrão, irá respeitar a definição de align-items do container.</h5>
+        <h5>- <b>flex-start:</b> ao inicio do container.</h5>
+        <h5>- <b>flex-end:</b> ao final do container.</h5>
+        <h5>- <b>center:</b> relativo ao centro de acordo com o eixto.</h5>
+        <h5>- <b>stretch:</b> ocupa todo o espaço relativo.</h5>
+        <h5>- <b>baseline:</b> utiliza a linha base da tipografia.</h5>
+
+        <hr><br>
+
+        <h3>ROW</h3>
+        <section class="flex-container align-container">
+            <div class="item auto">AAA</div>
+            <div class="item auto">123</div>
+            <div class="item auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="item auto">ITEM 4</div>
+        </section>
+
+        <section class="flex-container">
+            <div class="item center">AAA</div>
+            <div class="item start">123</div>
+            <div class="item strecth">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="item end">ITEM 4</div>
+        </section>
+
+        <section class="flex-container">
+            <div class="item center">AAA</div>
+            <div class="item start">AAAaaa</div>
+            <div class="item start">AAAaaaaaaaaa</div>
+            <div class="item strecth">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        </section>
+
+        <br><br>
+
+        <h3>COLUMN</h3>
+        <section class="flex-container align-container direction-column">
+            <div class="item auto">AAA</div>
+            <div class="item auto">123</div>
+            <div class="item auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="item auto">ITEM 4</div>
+        </section>
+
+        <section class="flex-container direction-column">
+            <div class="item center">AAA</div>
+            <div class="item start">123</div>
+            <div class="item strecth">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="item end">ITEM 4</div>
+        </section>
+
+        <section class="flex-container direction-column">
+            <div class="item center">AAA</div>
+            <div class="item start">AAAaaa</div>
+            <div class="item start">AAAaaaaaaaaa</div>
+            <div class="item strecth">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        </section>
+
+
+    </div>
+</body>
+</html>
